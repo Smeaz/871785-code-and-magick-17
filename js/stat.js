@@ -46,7 +46,7 @@ var renderStatisticBar = function (ctx, maxTime, timePlayer, namePlayer, counter
   var columnHeight = (time * COLUMN_MAX_HEIGHT) / maxTime;
 
   ctx.fillStyle = paintStatisticBar(namePlayer);
-  ctx.fillRect(CLOUD_X + COLUMN_GAP + (COLUMN_GAP + COLUMN_WIDTH) * counter, CLOUD_HEIGHT - FONT_SIZE - GAP, COLUMN_WIDTH, - columnHeight);
+  ctx.fillRect(CLOUD_X + COLUMN_GAP + (COLUMN_GAP + COLUMN_WIDTH) * counter, CLOUD_HEIGHT - FONT_SIZE - GAP, COLUMN_WIDTH, -columnHeight);
   ctx.fillStyle = '#000';
   ctx.fillText(namePlayer, CLOUD_X + COLUMN_GAP + (COLUMN_GAP + COLUMN_WIDTH) * counter, CLOUD_HEIGHT - FONT_GAP);
   ctx.fillText(time, CLOUD_X + COLUMN_GAP + (COLUMN_GAP + COLUMN_WIDTH) * counter, CLOUD_HEIGHT - FONT_SIZE - GAP - FONT_GAP - columnHeight);
