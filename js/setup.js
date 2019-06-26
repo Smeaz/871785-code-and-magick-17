@@ -11,9 +11,9 @@ var eyes = ['black', 'red', 'blue', 'yellow', 'green'];
 var wizardTemplate = document.querySelector('#similar-wizard-template');
 var similarList = document.querySelector('.setup-similar-list');
 
-var makeMag = function (firstNames, secondNames, coatColors, eyesColors) {
+var makeMag = function (fNames, sNames, coatColors, eyesColors) {
   var randomWizard = {
-    name: firstNames[Math.floor(Math.random() * firstNames.length)] + ' ' + secondNames[Math.floor(Math.random() * secondNames.length)],
+    name: fNames[Math.floor(Math.random() * fNames.length)] + ' ' + sNames[Math.floor(Math.random() * sNames.length)],
     coatColor: coatColors[Math.floor(Math.random() * coatColors.length)],
     eyesColor: eyesColors[Math.floor(Math.random() * eyesColors.length)]
   };
@@ -23,7 +23,7 @@ var makeMag = function (firstNames, secondNames, coatColors, eyesColors) {
 var similarWizards = [];
 for (var i = 0; i <= 3; i++) {
   similarWizards.push(makeMag(firstNames, secondNames, coats, eyes));
-};
+}
 
 var renderWizard = function (wizard) {
   var elementWizard = wizardTemplate.content.querySelector('.setup-similar-item').cloneNode(true);
